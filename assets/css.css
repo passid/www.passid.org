@@ -18,39 +18,29 @@ fieldset,img{border:0;}
 table{border-collapse:collapse;border-spacing:0;}
 
 /* generic */
-input[type=submit], button, label[for]{cursor:pointer;}
-input[readonly],textarea[readonly]{ background-color:#ededed;}
-abbr[title], acronym[title]{border-bottom:thin solid;cursor:help;}
-strong, b{font-weight:bold;}
-blockquote {border-left:5px solid #e5e5e5; margin:10px 0; padding:0 0 0 20px; }
-pre { padding:10px 20px; border-radius: 5px; background: #f6f6f6; border:1px solid #e5e5e5; overflow-x: auto;}
-table {width:100%;}
-th, td {text-align:left;padding:5px 10px; border-bottom:1px solid #e5e5e5;}
-dt {color:#444;font-weight:700;}
-th {color:#444;}
-img {max-width:100%;}
+label[for]{cursor:pointer;}
 
 /* base */
 body {color:#333;}
-a{color:#000; }
-a:hover{color:#666;}
 h1 { font-size:36px;}
-h2 { font-size:24px;}
-h3 { font-size:20px;}
-h4 { font-size:18px;}
-h5 { font-size:16px;}
-h6 { font-size:14px;}
-.hidden{ display:none;}
 
+/*logo*/
+.logo{ margin-left: 10px;}
+.logo a{color: #333;}
 /*form*/
-.form-label, .settings, .form-labelinput{ display: block;}
-.form-label, .form-text, .form-number, .form-password, .form-labelinput, .settings, .form-tip{ margin-left: 10px;}
-.form-label{ font-size: 12px; font-weight: 700; margin-top: 8px;}
-.form-tip{ color: #999; font-size: 12px; }
-.form-password{ padding: 4px 10px; display: inline-block; background-color: #333; color: #fff; line-height: 40px; font-size: 20px;}
+.label, .settings, .labelinput{ display: block;}
+.label, .text, .number, .password, .labelinput, .settings, .tip{ margin-left: 10px;}
+.label{ font-size: 12px; font-weight: 700; margin-top: 8px;}
+.text, .number{ width: 200px; height: 20px; padding: 2px 10px; border:solid 1px #999;}
+.tip{ color: #999; font-size: 12px; }
+.password{ width: 202px; height: 40px; line-height: 40px; padding: 4px 10px; display: inline-block; background-color: #333; color: #fff; font-size: 20px; text-align: center;}
 .settings{ margin-top: 20px; padding-left: 50px;}
-.form-more{ margin-top: -10px;}
+.more{ margin-top: -10px;}
+.more .text, .more .number{ width: 100px;}
+.labelinput input{ vertical-align: middle; margin-right: 4px;}
+/*faq*/
+.faq{ padding:0 10px; list-style: decimal; list-style-position: inside;}
 /*footer*/
-.footer{ border-top:solid 1px #e2e2e2; padding-top:4px; color:#666; margin-top: 10px;}
+.footer{ border-top:solid 1px #e2e2e2; padding:4px 0 0 10px; color:#666; margin-top: 10px;}
 .footer a{  color:#666; font-weight:700;}
 .footer a:hover{ color:#404040; }

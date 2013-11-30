@@ -5,32 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 <meta name="keywords" content="密码生成器,password generator" />
 <meta name="description" content="在线密码生成器，可根据用户名生成不同网站的密码" />
-<title>密码生成器-password generator</title>
+<title>密码生成器</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css.css">
 </head>
 <body>
-<h1 class="logo">密码生成器</h1>
-<label class="form-label">用户名：</label>
-<input type="text" class="form-text" placeholder="网站或app的用户名">
-<label class="form-label">网站/app：</label>
-<input type="text" class="form-text" placeholder="表示在哪个网站或app使用">
-<label class="form-label">密码：</label>
-<span class="form-password">密码将生成在这里</span>
+<h1 class="logo"><a href="index.html">密码生成器</a></h1>
+<label class="label">用户名：</label>
+<input type="text" class="text" placeholder="网站或app的用户名">
+<label class="label">网站/app：</label>
+<input type="text" class="text" placeholder="在哪个网站或app使用">
+<label class="label">密码：</label>
+<span class="password">密码将生成在这里</span>
 <label class="settings">↓更多设置↓</label>
-<div class="form-more">
-<label class="form-label">salt：</label>
-<input type="text" class="form-number" placeholder="passid.org" ><span class="form-tip">默认salt为passid.org</span>
-<label class="form-label">密码长度：</label>
-<input type="number" class="form-number" placeholder="8"><span class="form-tip">默认8位长度</span>
-<label class="form-label">密码类型：</label>
-<label class="form-labelinput"><input type="checkbox" checked="checked">阿拉伯数字</label>
-<label class="form-labelinput"><input type="checkbox" checked="checked">小写字母</label>
-<label class="form-labelinput"><input type="checkbox" checked="checked">大写数字</label>
-<label class="form-labelinput"><input type="checkbox" checked="checked">特殊字符如+/=-@#~,.[]()!%^*$&</label>
+<div class="more">
+<label class="label">salt：</label>
+<input type="text" class="text" placeholder="passid.org" ><span class="tip">默认salt为passid.org</span>
+<label class="label">密码长度：</label>
+<input type="number" class="number" placeholder="8"><span class="tip">默认8位长度</span>
+<label class="label">密码类型：</label>
+<label class="labelinput"><input type="checkbox" checked="checked">阿拉伯数字</label>
+<label class="labelinput"><input type="checkbox" checked="checked">小写字母</label>
+<label class="labelinput"><input type="checkbox" checked="checked">大写数字</label>
+<label class="labelinput"><input type="checkbox" checked="checked">特殊字符如+/=-@#~,.[]()!%^*$&</label>
 </div>
 <footer class="footer">
-Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> and Host by Github.
+Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> and Host by Github. <a href="faq.html">FAQ</a>
 </footer>
 <script src="assets/sha512.js"></script>
 <script src="assets/base64.js"></script>
