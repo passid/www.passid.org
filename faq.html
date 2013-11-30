@@ -13,10 +13,10 @@
 <h1 class="logo"><a href="index.html">Password Generator</a></h1>
 <label class="label">faq：</label>
 <ol class="faq">
-<li><a href="http://www.passid.org/">www.passid.org</a>架设在github，所有密码在浏览器生成，不提交任何数据到后端，欢迎右键</li>
-<li><a href="http://www.passid.org/">www.passid.org</a>完全开源，代码托管在<a href="https://github.com/passid/www.passid.org" target="_blank">github</a>，欢迎fork</li>
-<li>hash采用公开算法的sha512和base64，生成方法为base64(sha512(用户名+网站域名+salt))，有效防止cmd5等网站的现有库^_^</li>
-<li>base64在基准字符集上增加的字符为-@#~,.[]()!%^*$&</li>
+<li><a href="http://www.passid.org/">www.passid.org</a> is hosting by github，and all password will generate by client's browsers. We don't collects any data. </li>
+<li><a href="http://www.passid.org/">www.passid.org</a> is an open source project, you can fork it in <a href="https://github.com/passid/www.passid.org" target="_blank">github</a></li>
+<li>We used sha512 and base64，and the hash function is base64(sha512(username+websit+salt))</li>
+<li>We adds some special words in base64, such as -@#~,.[]()!%^*$&</li>
 </ol>
 <footer class="footer">
 Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> & Github / <a href="faq.html">FAQ</a> / <a href="cn.html">中文版</a>
