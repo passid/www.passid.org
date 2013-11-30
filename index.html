@@ -10,8 +10,31 @@
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css.css">
 </head>
 <body>
-
-
-
+<h1 class="logo">密码生成器</h1>
+<label class="form-label">用户名：</label>
+<input type="text" class="form-text" placeholder="网站或app的用户名">
+<label class="form-label">网站/app：</label>
+<input type="text" class="form-text" placeholder="表示在哪个网站或app使用">
+<label class="form-label">密码：</label>
+<span class="form-password">密码将生成在这里</span>
+<label class="settings">↓更多设置↓</label>
+<div class="form-more">
+<label class="form-label">salt：</label>
+<input type="text" class="form-number" placeholder="passid.org" ><span class="form-tip">默认salt为passid.org</span>
+<label class="form-label">密码长度：</label>
+<input type="number" class="form-number" placeholder="8"><span class="form-tip">默认8位长度</span>
+<label class="form-label">密码类型：</label>
+<label class="form-labelinput"><input type="checkbox" checked="checked">阿拉伯数字</label>
+<label class="form-labelinput"><input type="checkbox" checked="checked">小写字母</label>
+<label class="form-labelinput"><input type="checkbox" checked="checked">大写数字</label>
+<label class="form-labelinput"><input type="checkbox" checked="checked">特殊字符如+/=-@#~,.[]()!%^*$&</label>
+</div>
+<footer class="footer">
+Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> and Host by Github.
+</footer>
+<script src="assets/sha512.js"></script>
+<script src="assets/base64.js"></script>
+<script src="assets/jquery.js"></script>
+<script src="assets/js.js"></script>
 </body>
 </html>

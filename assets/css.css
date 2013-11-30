@@ -1,0 +1,56 @@
+/* reset */
+body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0; vertical-align:baseline;}
+body,button,input,select,textarea{font:14px/1.5 "Helvetica Neue",Helvetica,STHeiTi,sans-serif,Arial,\5b8b\4f53;}
+code,kbd,pre,samp{font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+section,article,aside,header,footer,nav,dialog,figure{display:block;}
+figure{margin:0;}
+hr,button,input,textarea{margin:0;padding:0;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+a{text-decoration:none; outline:none;}
+a:hover, a:focus{text-decoration:underline;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+legend{color:#000;}
+fieldset,img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+
+/* generic */
+input[type=submit], button, label[for]{cursor:pointer;}
+input[readonly],textarea[readonly]{ background-color:#ededed;}
+abbr[title], acronym[title]{border-bottom:thin solid;cursor:help;}
+strong, b{font-weight:bold;}
+blockquote {border-left:5px solid #e5e5e5; margin:10px 0; padding:0 0 0 20px; }
+pre { padding:10px 20px; border-radius: 5px; background: #f6f6f6; border:1px solid #e5e5e5; overflow-x: auto;}
+table {width:100%;}
+th, td {text-align:left;padding:5px 10px; border-bottom:1px solid #e5e5e5;}
+dt {color:#444;font-weight:700;}
+th {color:#444;}
+img {max-width:100%;}
+
+/* base */
+body {color:#333;}
+a{color:#000; }
+a:hover{color:#666;}
+h1 { font-size:36px;}
+h2 { font-size:24px;}
+h3 { font-size:20px;}
+h4 { font-size:18px;}
+h5 { font-size:16px;}
+h6 { font-size:14px;}
+.hidden{ display:none;}
+
+/*form*/
+.form-label, .settings, .form-labelinput{ display: block;}
+.form-label, .form-text, .form-number, .form-password, .form-labelinput, .settings, .form-tip{ margin-left: 10px;}
+.form-label{ font-size: 12px; font-weight: 700; margin-top: 8px;}
+.form-tip{ color: #999; font-size: 12px; }
+.form-password{ padding: 4px 10px; display: inline-block; background-color: #333; color: #fff; line-height: 40px; font-size: 20px;}
+.settings{ margin-top: 20px; padding-left: 50px;}
+.form-more{ margin-top: -10px;}
+/*footer*/
+.footer{ border-top:solid 1px #e2e2e2; padding-top:4px; color:#666; margin-top: 10px;}
+.footer a{  color:#666; font-weight:700;}
+.footer a:hover{ color:#404040; }
