@@ -8,7 +8,7 @@
 var Base64 = {
 
     // private property
-    _keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=" + "-@#~,.[]()!%^*$&",
+    _keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
 
     // public method for encoding
     encode : function (input) {
