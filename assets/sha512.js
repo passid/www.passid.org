@@ -1,5 +1,3 @@
-Code of the SHA512() function
-
 /*
 *  Secure Hash Algorithm (SHA512)
 *  http://www.happycode.info/

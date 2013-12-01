@@ -14,23 +14,23 @@
 <p class="noie678">Please upgrade your browser to <a href="http://www.google.com/chrome" target="_blank">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> or <a href="http://www.opera.com/" target="_blank">Opera</a></p>
 <![endif]-->
 <h1 class="logo"><a href="/">Password Generator</a></h1>
-<label class="label">username:</label>
-<input type="text" class="text" placeholder="username on website or app">
+<label class="label">account/username:</label>
+<input name="account" type="text" class="text" placeholder="username on website or app" require="true" autocomplete="false">
 <label class="label">website/app:</label>
-<input type="text" class="text" placeholder="used for which website or app">
+<input name="app" type="text" class="text" placeholder="used for which website or app">
 <label class="label">password:</label>
-<span class="password">will apear here</span>
+<span id="J_password" class="password" title="will apear here">will apear here</span>
 <label class="settings">↓more settings↓</label>
 <div class="more">
 <label class="label">salt:</label>
-<input type="text" class="text" placeholder="passid.org" ><span class="tip">default salt "passid.org"</span>
+<input name="salt" type="text" class="text" placeholder="passid.org" autocomplete="false" value="passid.org"><span class="tip">default salt "passid.org"</span>
 <label class="label">password length:</label>
-<input type="number" class="number" placeholder="8" min="1" max="32" ><span class="tip">default length 8, max 32</span>
+<input name="lengths" type="number" class="number" placeholder="16" autocomplete="false" value="16" min="1" max="32" ><span class="tip">default length 16, max 32</span>
 <label class="label">password output:</label>
-<label class="labelinput"><input type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">UPPERCASE</label>
-<label class="labelinput"><input type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">lowercase</label>
-<label class="labelinput"><input type="checkbox" checked="checked" value="0123456789">arabic numerals</label>
-<label class="labelinput"><input type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&">special eg +/=-@#~,.[]()!%^*$&</label>
+<label class="labelinput"><input name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">UPPERCASE</label>
+<label class="labelinput"><input name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">lowercase</label>
+<label class="labelinput"><input name="arabic" type="checkbox" checked="checked" value="0123456789">arabic numerals</label>
+<label class="labelinput"><input name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&">special eg +/=-@#~,.[]()!%^*$&</label>
 </div>
 <footer class="footer">
 Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> & Github / <a href="faq.html">FAQ</a> / <a href="cn.html">中文版</a>
@@ -38,6 +38,7 @@ Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> & Github / <a
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/sha512.js"></script>
 <script src="assets/base64.js"></script>
+<script src="assets/passid.js"></script>
 <script src="assets/js.js"></script>
 </body>
 </html>
