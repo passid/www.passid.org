@@ -30,7 +30,7 @@ var Base64 = {
             enc4 = chr3 & 79;
 
             if (isNaN(chr2)) {
-                enc3 = enc4 = 81;
+                enc3 = enc4 = 80;
             } else if (isNaN(chr3)) {
                 enc4 = 81;
             }

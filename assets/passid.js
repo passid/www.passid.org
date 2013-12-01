@@ -11,7 +11,7 @@
   var data = passid.data = {}
 
   data.salt = "passid.org"
-  data.lengths = 8
+  data.lengths = 16
   data.upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   data.lower = "abcdefghijklmnopqrstuvwxyz"
   data.arabic = "0123456789"
@@ -24,18 +24,14 @@
   }
 
   var isObject = isType("Object")
-  var isString = isType("String")
   var isArray = Array.isArray || isType("Array")
-  var isFunction = isType("Function")
-
 
   passid.password = function (account, app) {
     var pwd = ""
-    Base64._keyStr = data.upper + data.lower + data.arabic + data.special
+    Base64._keyStr = data.arabic + data.lower + data.upper + data.special
     pwd = SHA512(account+app+data.salt)
     pwd = Base64.encode(pwd)
-    console.log(pwd)
-    pwd = pwd.substr(data.salt.length, data.lengths)
+    pwd = pwd.substr((data.account + data.app + data.salt).length, data.lengths)
     return pwd
   }
 
