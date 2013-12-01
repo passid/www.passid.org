@@ -1,20 +1,18 @@
 function val (elements) {
-  var s = ""
-  var element = $("input[name='"+elements+"']");
+  var s = "";
+  var element = $("input[name='"+elements+"']")
   if (element.is("[type='checkbox']")) {
     return element.is(":checked") ?  element.val() : s
-  };
+  }
   return !!element.val() ? element.val() : s
 }
 function password () {
-  passid.config({
-    salt : val("salt"),
-    lengths : val("lengths"),
-    upper : val("upper"),
-    lower : val("lower"),
-    arabic : val("arabic"),
-    special : val("special")
-  })
+  var config = {}
+  var item = ["salt","lengths","arabic","lower","upper","special"]
+  for (var i = item.length - 1; i >= 0; i--) {
+    config[item[i]] = val((item[i]))
+  };
+  passid.config(config)
   var pwd = $("#J_password").attr("title")
   var account = val("account")
   var app = val("app")

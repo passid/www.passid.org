@@ -35,10 +35,10 @@
     return pwd
   }
 
-  passid.config = function(configData) {
+  passid.config = function(configs) {
 
-    for (var key in configData) {
-      var curr = configData[key]
+    for (var key in configs) {
+      var curr = configs[key]
       var prev = data[key]
 
       if (prev && isObject(prev)) {
