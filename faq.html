@@ -10,20 +10,20 @@
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css.css">
 </head>
 <body>
+<!--[if lt IE 9]>
+<p class="noie678">Please upgrade your browser to <a href="http://www.google.com/chrome" target="_blank">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> or <a href="http://www.opera.com/" target="_blank">Opera</a></p>
+<![endif]-->
 <h1 class="logo"><a href="index.html">Password Generator</a></h1>
 <label class="label">faq：</label>
 <ol class="faq">
-<li><a href="http://www.passid.org/">www.passid.org</a> is hosting by github，and all password will generate by client's browsers. We don't collects any data. </li>
-<li><a href="http://www.passid.org/">www.passid.org</a> is an open source project, you can fork it in <a href="https://github.com/passid/www.passid.org" target="_blank">github</a></li>
+<li><a href="http://www.passid.org/">www.passid.org</a> is hosting by github，and all password will generate by client's browsers. We don't collect any data. </li>
+<li><a href="http://www.passid.org/">www.passid.org</a> is an open source project, you can fork it on <a href="https://github.com/passid/www.passid.org" target="_blank">github</a></li>
 <li>We used sha512 and base64，and the hash function is base64(sha512(username+websit+salt))</li>
 <li>We adds some special words in base64, such as -@#~,.[]()!%^*$&</li>
+<li>We don't support ie6, ie7 and ie8.</li>
 </ol>
 <footer class="footer">
 Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> & Github / <a href="faq.html">FAQ</a> / <a href="cn.html">中文版</a>
 </footer>
-<script src="assets/sha512.js"></script>
-<script src="assets/base64.js"></script>
-<script src="assets/jquery.js"></script>
-<script src="assets/js.js"></script>
 </body>
 </html>
