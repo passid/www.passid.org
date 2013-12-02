@@ -18,7 +18,7 @@
 <ol class="faq">
 <li><a href="http://www.passid.org/">www.passid.org</a> is hosting by github，and all password generates by client's browsers. We don't collect any data</li>
 <li><a href="http://www.passid.org/">www.passid.org</a> is an open source project, you can fork it on <a href="https://github.com/passid/www.passid.org" target="_blank">github</a></li>
-<li>We used sha512 and base64，and the hash function is base64(sha512(account+app+salt)).substr((account+app+salt).length,length)</li>
+<li>We used sha512 and base64，and the hash function is base64(sha512(account+app+salt)).substr(((account+app+data.salt).length+length*length,length)</li>
 <li>We adds some special words in base64, such as -@#~,.[]()!%^*$&</li>
 <li>We don't support ie6, ie7 and ie8.</li>
 </ol>

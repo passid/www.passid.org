@@ -27,6 +27,9 @@ function password () {
 $("input[type='text'], input[type='number']").on("keyup",function () {
   password()
 })
+$("input[type='number']").on("change",function () {
+  password()
+})
 $("input[type='checkbox']").on("click",function () {
   password()
 })

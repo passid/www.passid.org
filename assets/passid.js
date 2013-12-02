@@ -28,10 +28,15 @@
 
   passid.password = function (account, app) {
     var pwd = ""
+    var len = parseInt(data.lengths)
+    var lenother = (account+app+data.salt).length
     Base64._keyStr = data.arabic + data.lower + data.upper + data.special
     pwd = SHA512(account+app+data.salt)
     pwd = Base64.encode(pwd)
-    pwd = pwd.substr((data.account + data.app + data.salt).length, data.lengths)
+    for (var i = Math.ceil(len / 12 + lenother / 170 )  ; i > 0; i--) {
+      pwd += pwd;
+    };
+    pwd = pwd.substr( lenother + len*len, len)
     return pwd
   }
 
