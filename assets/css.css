@@ -38,6 +38,7 @@ h1 { font-size:32px;}
 .settings{ margin-top: 20px; padding-left: 60px;}
 .more{ margin-top: -10px;}
 .more .text, .more .number{ width: 100px;}
+.labelinput{ cursor: pointer;}
 .labelinput input{ vertical-align: middle; margin-right: 4px;}
 /*faq*/
 .faq{ padding:0 10px; list-style: decimal; list-style-position: inside;}
