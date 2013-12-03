@@ -36,7 +36,6 @@
     for (var i = Math.ceil((lenother + len*len) / 170 )   ; i > 0; i--) {
       pwd += pwd;
     };
-    console.log(pwd)
     pwd = pwd.substr( lenother + len*len, len)
     return pwd
   }
