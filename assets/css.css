@@ -27,7 +27,7 @@ h1 { font-size:32px;}
 /*logo*/
 .logo{ margin-left: 10px; margin-bottom: -10px;}
 .logo a{color: #333; position: relative;}
-.logo a:after{ content: "1.0.1"; color:#e74006; font-size: 10px; position: absolute; right: -20px; top:0;}
+.logo a:after{ content: "1.0.2"; color:#e74006; font-size: 10px; position: absolute; right: -20px; top:0;}
 /*form*/
 .label, .settings, .labelinput{ display: block;}
 .label, .text, .number, .password, .labelinput, .settings, .tip{ margin-left: 10px;}

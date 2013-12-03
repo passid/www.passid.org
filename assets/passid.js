@@ -5,7 +5,7 @@
   }
 
   var passid = global.passid = {
-    version: "1.0"
+    version: "1.0.2"
   }
 
   var data = passid.data = {}
@@ -33,9 +33,10 @@
     Base64._keyStr = data.arabic + data.lower + data.upper + data.special
     pwd = SHA512(account+app+data.salt)
     pwd = Base64.encode(pwd)
-    for (var i = Math.ceil(len / 12 + lenother / 170 )  ; i > 0; i--) {
+    for (var i = Math.ceil((lenother + len*len) / 170 )   ; i > 0; i--) {
       pwd += pwd;
     };
+    console.log(pwd)
     pwd = pwd.substr( lenother + len*len, len)
     return pwd
   }
