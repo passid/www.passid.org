@@ -22,6 +22,12 @@ function password () {
   }
   pwd = passid.password(account , app)
   $("#J_password").html(pwd)
+  if( typeof (timer) == "number"){clearTimeout(timer)}
+  timer = setTimeout(countdown,600000);
+}
+var timer;
+function countdown(){
+  $("form")[0].reset();
 }
 
 $("input[type='text'], input[type='number']").on("keyup",function () {
