@@ -27,7 +27,7 @@ h1 { font-size:32px;}
 /*logo*/
 .logo{ margin-left: 10px; margin-bottom: -10px;}
 .logo a{color: #333; position: relative;}
-.logo a:after{ content: "1.0.2"; color:#e74006; font-size: 10px; position: absolute; right: -20px; top:0;}
+.logo a:after{ content: "1.0.3"; color:#e74006; font-size: 10px; position: absolute; right: -20px; top:0;}
 /*form*/
 .label, .settings, .labelinput{ display: block;}
 .label, .text, .number, .password, .labelinput, .settings, .tip{ margin-left: 10px;}
@@ -42,6 +42,7 @@ h1 { font-size:32px;}
 .labelinput input{ vertical-align: middle; margin-right: 4px;}
 /*faq*/
 .faq{ padding:0 10px; list-style: decimal; list-style-position: inside;}
+.link a{ display: inline-block; margin: 0 10px;}
 /*footer*/
 .footer{ border-top:solid 1px #e2e2e2; padding:4px 0 0 10px; color:#666; margin-top: 10px;}
 .footer a{  color:#666; font-weight:700;}
