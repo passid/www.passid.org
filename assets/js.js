@@ -23,7 +23,7 @@ function password () {
   pwd = passid.password(account , app)
   $("#J_password").html(pwd)
   if( typeof (timer) == "number"){clearTimeout(timer)}
-  timer = setTimeout(countdown,600000);
+  timer = setTimeout(countdown,180000);
 }
 var timer;
 function countdown(){
