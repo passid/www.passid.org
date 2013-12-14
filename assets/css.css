@@ -41,7 +41,7 @@ h1 { font-size:32px;}
 .labelinput{ cursor: pointer;}
 .labelinput input{ vertical-align: middle; margin-right: 4px;}
 /*faq*/
-.faq{ padding:0 10px; list-style: decimal; list-style-position: inside;}
+.faq{ margin:0 10px; list-style: decimal; list-style-position: inside;}
 .link a{ display: inline-block; margin: 0 10px;}
 /*footer*/
 .footer{ border-top:solid 1px #e2e2e2; padding:4px 0 0 10px; color:#666; margin-top: 10px;}

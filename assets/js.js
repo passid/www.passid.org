@@ -20,7 +20,12 @@ function password () {
     $("#J_password").html(pwd)
     return
   }
-  pwd = passid.password(account , app)
+  var response = passid.password(account , app)
+  if (response["status"] != "200") {
+    alert(response["message"])
+    return
+  }
+  pwd = response["result"]
   $("#J_password").html(pwd)
   if( typeof (timer) == "number"){clearTimeout(timer)}
   timer = setTimeout(countdown,60000)
