@@ -1,5 +1,5 @@
 function val (elements) {
-  var s = "";
+  var s = ""
   var element = $("input[name='"+elements+"']")
   if (element.is("[type='checkbox']")) {
     return element.is(":checked") ?  element.val() : s
@@ -23,11 +23,16 @@ function password () {
   pwd = passid.password(account , app)
   $("#J_password").html(pwd)
   if( typeof (timer) == "number"){clearTimeout(timer)}
-  timer = setTimeout(countdown,180000);
+  timer = setTimeout(countdown,60000)
 }
 var timer;
 function countdown(){
-  $("form")[0].reset();
+  $("input[name='account'], input[name='app']").val("")
+  $("#J_password").html($("#J_password").attr("title"))
+  $("input[name='salt'], input[name='lengths']").each(function(){
+    $(this).val($(this).attr("placeholder"))
+  })
+  $("input[type='checkbox']").prop("checked",true)
 }
 
 $("input[type='text'], input[type='number']").on("keyup",function () {
@@ -39,4 +44,3 @@ $("input[type='number']").on("change",function () {
 $("input[type='checkbox']").on("click",function () {
   password()
 })
-
