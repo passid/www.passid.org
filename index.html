@@ -10,26 +10,26 @@
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css.css">
 </head>
 <body>
-<h1 class="logo"><a href="/">Password Generator</a></h1>
-<label class="label">account/username:</label>
-<input name="account" type="text" class="text" placeholder="username on website or app" require="true" autocomplete="false">
-<label class="label">app/website:</label>
-<input name="app" type="text" class="text" placeholder="used for which website or app">
-<label class="label">password:</label>
-<span id="J_password" class="password" title="will be here">will be here</span>
-<label class="settings">↓more settings↓</label>
+<h1><a href="/">Password Generator</a></h1>
+<label>account/username:</label>
+<input name="account" type="text" placeholder="username on website or app" require="true" autocomplete="false">
+<label>app/website:</label>
+<input name="app" type="text" placeholder="used for which website or app">
+<label>password:</label>
+<p id="J_password" itle="will be here">will be here</p>
+<h5>↓more settings↓</h5>
 <div class="more">
-<label class="label">salt:</label>
-<input name="salt" type="text" class="text" placeholder="passid.org" autocomplete="false" value="passid.org"><span class="tip">default salt "passid.org"</span>
-<label class="label">password length:</label>
-<input name="lengths" type="number" class="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" ><span class="tip">default length 10, max 32</span>
-<label class="label">password output:</label>
-<label class="labelinput"><input name="arabic" type="checkbox" checked="checked" value="0123456789">arabic numerals, like 0-9</label>
-<label class="labelinput"><input name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">lowercase, like a-z</label>
-<label class="labelinput"><input name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">UPPERCASE, like A-Z</label>
-<label class="labelinput"><input name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&">special, like +/=-@#~,.[]()!%^*$&</label>
+<label>salt:</label>
+<input name="salt" type="text" placeholder="passid.org" autocomplete="false" value="passid.org"><span>default salt "passid.org"</span>
+<label>password length:</label>
+<input name="lengths" type="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" ><span>default length 10, max 32</span>
+<label>password output:</label>
+<label for="arabic"><input id="arabic" name="arabic" type="checkbox" checked="checked" value="0123456789">arabic numerals, like 0-9</label>
+<label for="lower"><input id="lower" name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">lowercase, like a-z</label>
+<label for="upper"><input id="upper" name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">UPPERCASE, like A-Z</label>
+<label for="special"><input id="special" name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&">special, like +/=-@#~,.[]()!%^*$&</label>
 </div>
-<footer class="footer">
+<footer>
 Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> & Github / <a href="faq.html">FAQ</a> / <a href="cn.html">中文版</a>
 </footer>
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>

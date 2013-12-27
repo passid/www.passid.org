@@ -10,24 +10,24 @@
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css.css">
 </head>
 <body>
-<h1 class="logo"><a href="cn.html">密码生成器</a></h1>
-<label class="label">用户名:</label>
-<input name="account" type="text" class="text" placeholder="网站或app的用户名" require="true" autocomplete="false">
-<label class="label">网站/应用:</label>
-<input name="app" type="text" class="text" placeholder="用在哪个网站或应用">
-<label class="label">密码:</label>
-<span id="J_password" class="password" title="密码将出现在这里">密码将出现在这里</span>
-<label class="settings">↓更多设置↓</label>
-<div class="more">
-<label class="label">salt:</label>
-<input name="salt" type="text" class="text" placeholder="passid.org" autocomplete="false" value="passid.org"><span class="tip">默认salt为passid.org</span>
-<label class="label">密码长度:</label>
-<input name="lengths" type="number" class="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" ><span class="tip">默认10位长度,最大32位</span>
-<label class="label">密码类型:</label>
-<label class="labelinput"><input name="arabic" type="checkbox" checked="checked" value="0123456789">阿拉伯数字,如0-9</label>
-<label class="labelinput"><input name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">小写字母,如a-z</label>
-<label class="labelinput"><input name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">大写字母,如A-Z</label>
-<label class="labelinput"><input name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&">特殊字符,如+/=-@#~,.[]()!%^*$&</label>
+<h1><a href="cn.html">密码生成器</a></h1>
+<label>用户名:</label>
+<input name="account" type="text" placeholder="网站或app的用户名" require="true" autocomplete="false">
+<label>网站/应用:</label>
+<input name="app" type="text" placeholder="用在哪个网站或应用">
+<label>密码:</label>
+<p id="J_password" title="密码将出现在这里">密码将出现在这里</p>
+<h5>↓更多设置↓</h5>
+<div>
+<label>salt:</label>
+<input name="salt" type="text" placeholder="passid.org" autocomplete="false" value="passid.org"><span class="tip">默认salt为passid.org</span>
+<label>密码长度:</label>
+<input name="lengths" type="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" ><span class="tip">默认10位长度,最大32位</span>
+<label>密码类型:</label>
+<label for="arabic"><input id="arabic" name="arabic" type="checkbox" checked="checked" value="0123456789">阿拉伯数字,如0-9</label>
+<label for="lower"><input id="lower" name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">小写字母,如a-z</label>
+<label for="upper"><input id="upper" name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">大写字母,如A-Z</label>
+<label for="special"><input id="special" name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&">特殊字符,如+/=-@#~,.[]()!%^*$&</label>
 </div>
 <footer class="footer">
 Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> & Github / <a href="cn-faq.html">问答</a> / <a href="/">English</a>
