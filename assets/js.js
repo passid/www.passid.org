@@ -26,26 +26,28 @@ function password () {
     return
   }
   pwd = response["result"]
-  $("#J_password").html(pwd)
+  $("input[name='password']").val(pwd)
   if( typeof (timer) == "number"){clearTimeout(timer)}
   timer = setTimeout(countdown,60000)
 }
 var timer;
 function countdown(){
   $("input[name='account'], input[name='app']").val("")
-  $("#J_password").html($("#J_password").attr("title"))
+  $("input[name='password']").val("")
   $("input[name='salt'], input[name='lengths']").each(function(){
     $(this).val($(this).attr("placeholder"))
   })
   $("input[type='checkbox']").prop("checked",true)
 }
 
-$("input[type='text'], input[type='number']").on("keyup",function () {
+$("input[type='text'], input[type='number'], input[type='password']").on("keyup", function(){
+  password()
+}).on("mouseover",function(){
+  $(this).select()
+})
+$("input[type='number']").on("change",function(){
   password()
 })
-$("input[type='number']").on("change",function () {
-  password()
-})
-$("input[type='checkbox']").on("click",function () {
+$("input[type='checkbox']").on("click",function(){
   password()
 })

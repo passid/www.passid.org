@@ -16,13 +16,13 @@
 <label>网站/应用:</label>
 <input name="app" type="text" placeholder="用在哪个网站或应用">
 <label>密码:</label>
-<p id="J_password" title="密码将出现在这里">密码将出现在这里</p>
+<input type="text" name="password" placeholder="密码将出现在这里">
 <h5>↓更多设置↓</h5>
 <div>
 <label>salt:</label>
-<input name="salt" type="text" placeholder="passid.org" autocomplete="false" value="passid.org"><span>默认salt为passid.org</span>
+<input name="salt" type="password" placeholder="passid.org" autocomplete="false" value="passid.org"><span>默认salt为passid.org</span>
 <label>密码长度:</label>
-<input name="lengths" type="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" ><span>默认10位长度,最大32位</span>
+<input name="lengths" type="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" ><span>最小1位最大32位</span>
 <label>密码类型:</label>
 <label for="arabic"><input id="arabic" name="arabic" type="checkbox" checked="checked" value="0123456789">阿拉伯数字,如0-9</label>
 <label for="lower"><input id="lower" name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">小写字母,如a-z</label>
