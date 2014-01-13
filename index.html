@@ -12,22 +12,22 @@
 <body>
 <h1><a href="/">Password Generator</a></h1>
 <label>account/username:</label>
-<input name="account" type="text" placeholder="username on website or app" require="true" autocomplete="false">
+<input name="account" type="text" placeholder="username on website or app" require="true" autocomplete="false" tabindex="1">
 <label>app/website:</label>
-<input name="app" type="text" placeholder="used for which website or app">
+<input name="app" type="text" placeholder="used for which website or app" tabindex="2">
 <label>password:</label>
 <input type="text" name="password" placeholder="will be here" readonly="true">
 <h5>↓more settings↓</h5>
 <div>
 <label>salt:</label>
-<input name="salt" type="password" placeholder="passid.org" autocomplete="false" value="passid.org"><span>default salt "passid.org"</span>
+<input name="salt" type="password" placeholder="passid.org" autocomplete="false" value="passid.org" tabindex="3"><span>default salt "passid.org"</span>
 <label>password length:</label>
-<input name="lengths" type="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" ><span>min 1, max 32</span>
+<input name="lengths" type="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" tabindex="4"><span>min 1, max 32</span>
 <label>password output:</label>
-<label for="arabic"><input id="arabic" name="arabic" type="checkbox" checked="checked" value="0123456789">arabic numerals, like 0-9</label>
-<label for="lower"><input id="lower" name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz">lowercase, like a-z</label>
-<label for="upper"><input id="upper" name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">UPPERCASE, like A-Z</label>
-<label for="special"><input id="special" name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&">special, like +/=-@#~,.[]()!%^*$&</label>
+<label for="arabic"><input id="arabic" name="arabic" type="checkbox" checked="checked" value="0123456789" tabindex="5">arabic numerals, like 0-9</label>
+<label for="lower"><input id="lower" name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz" tabindex="6">lowercase, like a-z</label>
+<label for="upper"><input id="upper" name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" tabindex="7">UPPERCASE, like A-Z</label>
+<label for="special"><input id="special" name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&" tabindex="8">special, like +/=-@#~,.[]()!%^*$&</label>
 </div>
 <footer>
 Powered by <a href="http://www.yeeh.org/" target="_blank">Yeeh</a> & Github / <a href="faq.html">FAQ</a> / <a href="cn.html">中文版</a>
