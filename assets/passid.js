@@ -1,10 +1,10 @@
-(function(global, undefined) {
+(function(window, undefined) {
 
-  if (global.passid) {
+  if (window.passid) {
     return
   }
 
-  var passid = global.passid = {
+  var passid = window.passid = {
     version: "1.0.4"
   }
 
@@ -54,7 +54,7 @@
     pwd = Base64.encode(pwd)
     for (var i = Math.ceil((lenother + len*len) / 170 ) + 1; i > 0; i--) {
       pwd += pwd
-    };
+    }
     pwd = pwd.substr( lenother + len*len, len)
     return response("200",pwd)
   }
@@ -81,4 +81,4 @@
     return passid
   }
 
-})(this);
+})(window);
