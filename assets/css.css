@@ -21,7 +21,7 @@ table{border-collapse:collapse;border-spacing:0;}
 label[for]{cursor:pointer;}
 
 /* base */
-body {color:#333;}
+body {color:#333; min-width: 360px;}
 
 /*logo*/
 h1{ font-size:32px; margin-left: 10px; margin-bottom: -10px;}
