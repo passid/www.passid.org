@@ -27,7 +27,7 @@ var Base64 = {
             enc1 = chr1 >> 2;
             enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
             enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
-            enc4 = chr3 & 79;
+            enc4 = chr3 & 79 ;
 
             if (isNaN(chr2)) {
                 enc3 = enc4 = 80;
@@ -71,8 +71,6 @@ var Base64 = {
         }
 
         return utftext;
-    },
-
-
+    }
 
 }
