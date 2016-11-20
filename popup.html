@@ -5,29 +5,30 @@
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css.css">
 </head>
 <body>
-<h1><a href="http://www.passid.org/" target="_blank">Password Generator</a></h1>
+<div id="template">
+<h1><a href="/">Password Generator</a></h1>
 <label>account/username:</label>
-<input name="account" type="text" placeholder="username on website or app" require="true" autocomplete="false" tabindex="1">
+<input v-model.trim="account" @keyup="render" type="text" placeholder="username on website / app" require="true" autocomplete="false" tabindex="1">
 <label>app/website:</label>
-<input name="app" type="text" placeholder="used for which website or app" tabindex="2">
+<input v-model.trim="app" @keyup="render" type="text" placeholder="used for which website / app" tabindex="2">
 <label>password:</label>
-<input type="text" name="password" placeholder="will be here" readonly="true">
+<input :value="password" @mouseover="copy" name="password" type="text" placeholder="will be here" >
+<h3>{{message}}</h3>
 <h5>↓more settings↓</h5>
-<div>
-<label>salt:</label>
-<input name="salt" type="password" placeholder="passid.org" autocomplete="false" value="passid.org" tabindex="3"><span>default salt "passid.org"</span>
-<label>password length:</label>
-<input name="lengths" type="number" placeholder="10" autocomplete="false" value="10" min="1" max="32" tabindex="4"><span>min 1, max 32</span>
+<label>salt<span>(default salt 'passid.org')</span>:</label>
+<input v-model.trim="salt" @keyup="render" type="password" autocomplete="false" tabindex="3">
+<label>password length<span>(min 1,max 32)</span>:</label>
+<input v-model.trim.number="lengths" @change="render" @keyup="render" type="number" placeholder="min 1, max 32" autocomplete="false" min="1" max="32" tabindex="4">
 <label>password output:</label>
-<label for="arabic"><input id="arabic" name="arabic" type="checkbox" checked="checked" value="0123456789" tabindex="5">arabic numerals, like 0-9</label>
-<label for="lower"><input id="lower" name="lower" type="checkbox" checked="checked" value="abcdefghijklmnopqrstuvwxyz" tabindex="6">lowercase, like a-z</label>
-<label for="upper"><input id="upper" name="upper" type="checkbox" checked="checked" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" tabindex="7">UPPERCASE, like A-Z</label>
-<label for="special"><input id="special" name="special" type="checkbox" checked="checked" value="+/=-@#~,.[]()!%^*$&" tabindex="8">special, like +/=-@#~,.[]()!%^*$&</label>
+<label for="arabic"><input v-model="arabic" @change="render" id="arabic" type="checkbox" checked="checked" tabindex="5">arabic numerals, like 0-9</label>
+<label for="lower"><input v-model="lower" @change="render" id="lower" type="checkbox" checked="checked" tabindex="6">lowercase, like a-z</label>
+<label for="upper"><input v-model="upper" @change="render" id="upper" type="checkbox" checked="checked" tabindex="7">UPPERCASE, like A-Z</label>
+<label for="special"><input v-model="special" @change="render" id="special" type="checkbox" checked="checked" tabindex="8">special, like +/=-@#~,.[]()!%^*$&</label>
 </div>
 <footer>
-Powered by <a href="http://www.yeh.sh/" target="_blank">Yeh</a> / <a href="https://github.com/passid/www.passid.org" target="_blank" title="view in github">Github</a>
+Powered by <a href="http://www.yeh.sh/" target="_blank">Yeh</a> / <a href="https://github.com/passid/www.passid.org" target="_blank" title="view in github">Github</a> & <a href="https://chrome.google.com/webstore/detail/password-generator/pollejchmgaeaaamgmhckdhcaidfhikp" target="_blank" title="download chrome extensions">Chrome</a> / <a href="cn.html" title="密码生成器">密码生成器</a>
 </footer>
-<script src="assets/jquery-1.11.1.min.js"></script>
+<script src="assets/vue.min.js"></script>
 <script src="assets/sha512.js"></script>
 <script src="assets/base64.js"></script>
 <script src="assets/passid.js"></script>

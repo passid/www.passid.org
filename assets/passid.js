@@ -5,7 +5,7 @@
   }
 
   var passid = window.passid = {
-    version: "1.0.4"
+    version: "2.0"
   }
 
   var data = passid.data = {}
@@ -16,7 +16,12 @@
   data.lower = "abcdefghijklmnopqrstuvwxyz"
   data.arabic = "0123456789"
   data.special = "+/=-@#~,.[]()!%^*$&"
-  data.statuss = {"200":"200 success", "601":"601 account is empty", "602":"602 password output length is too short", "603":"603 password output type is empty"}
+  data.statuss = {
+    "200":"200 success", 
+    "601":"601 account is empty", 
+    "602":"602 password output length is too short", 
+    "603":"603 password output type is empty"
+  }
 
   function response(status, result){
     var temp = {}

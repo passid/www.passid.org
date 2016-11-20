@@ -1,53 +1,75 @@
-(function(window, undefined) {
-  function val (element) {
-    var s = ""
-    var ele = $("input[name='"+element+"']")
-    if (ele.is("[type='checkbox']")) {
-      return ele.is(":checked") ?  ele.val() : s
+new Vue({
+  el:'#template',
+  data : {
+    account : '',
+    app : '',
+    password : '',
+    salt : 'passid.org',
+    lengths : 10,
+    lower : true,
+    upper : true,
+    arabic : true,
+    special : true,
+    value : {
+      upper : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      lower : "abcdefghijklmnopqrstuvwxyz",
+      arabic : "0123456789",
+      special : "+/=-@#~,.[]()!%^*$&"
+    },
+    message : '',
+    timers : []
+  },
+  methods : {
+    render : function () {
+      var config = {
+        salt : this.salt,
+        lengths : this.lengths,
+        upper : this.upper ? this.value.upper : '',
+        lower : this.lower ? this.value.lower : '',
+        arabic : this.arabic ? this.value.arabic : '',
+        special : this.special ? this.value.special : ''
+      }
+      passid.config(config)
+      var response = passid.password(this.account , this.app)
+      if (response["status"] != "200") {
+        this.password = ''
+        this.message = response["message"]
+        return
+      }
+      this.password = response["result"]
+      this.clearCountdown()
+      var timer = window.setTimeout(this.clear , 60000)
+      this.timers.push(timer)
+    },
+    copy : function (event) {
+      event && event.target.select()
+      // try{
+      //   var copy = document.execCommand('copy');
+      //   console.log(copy)
+      //   this.message = 'password is copyed'
+      // }catch(e){
+      //   this.message = 'you can copy password now'
+      // }
+    },
+    clear : function () {
+        this.account = ''
+        this.app = ''
+        this.password = ''
+        this.salt = 'passid.org'
+        this.lengths = 10
+        this.lower = true
+        this.upper = true
+        this.arabic = true
+        this.special = true
+        this.message = ''
+        this.clearCountdown();
+    },
+    clearCountdown : function () {
+      this.timers.forEach(function(timer){      
+          window.clearTimeout(timer)
+      })
+      this.timers = []   
     }
-    return !!ele.val() ? ele.val() : s
   }
-  function password () {
-    var config = {}
-    var item = ["salt","lengths","arabic","lower","upper","special"]
-    for (var i = item.length - 1; i >= 0; i--) {
-      config[item[i]] = val((item[i]))
-    };
-    passid.config(config)
-    var pwd = $("input[name='password']")
-    var account = val("account")
-    var app = val("app")
-    if ( account.length < 1) {
-      pwd.val("")
-      return
-    }
-    var response = passid.password(account , app)
-    if (response["status"] != "200") {
-      alert(response["message"])
-      return
-    }
-    pwd.val(response["result"])
-    if( typeof (timer) == "number"){clearTimeout(timer)}
-    timer = setTimeout(countdown,60000)
-  }
-  var timer;
-  function countdown(){
-    $("input[name='account'], input[name='app'], input[name='password']").val("")
-    $("input[name='salt'], input[name='lengths']").each(function(){
-      $(this).val($(this).attr("placeholder"))
-    })
-    $("input[type='checkbox']").prop("checked",true)
-  }
+})
 
-  $("input[type='text'], input[type='number'], input[type='password']").on("keyup", function(){
-    password()
-  }).on("mouseover",function(){
-    $(this).select()
-  })
-  $("input[type='number']").on("change",function(){
-    password()
-  })
-  $("input[type='checkbox']").on("click",function(){
-    password()
-  })
-})(window);
