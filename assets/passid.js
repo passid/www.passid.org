@@ -17,10 +17,10 @@
   data.arabic = "0123456789"
   data.special = "+/=-@#~,.[]()!%^*$&"
   data.statuss = {
-    "200":"200 success", 
-    "601":"601 account is empty", 
-    "602":"602 password output length is too short", 
-    "603":"603 password output type is empty"
+    "200":"generate success", 
+    "601":"account is empty", 
+    "602":"password output length is too short", 
+    "603":"password output type is empty"
   }
 
   function response(status, result){
