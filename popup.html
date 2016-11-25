@@ -12,7 +12,7 @@
 <label>app/website:</label>
 <input v-model.trim="app" @keyup="render" type="text" placeholder="used for which website / app" tabindex="2">
 <label>password:</label>
-<input :value="password" @mouseover="copy" name="password" type="text" placeholder="will be here" >
+<input :value="password" @mouseover="copy" name="password" type="text" placeholder="will be here" readonly="true">
 <h3>{{message}}</h3>
 <h5>↓more settings↓</h5>
 <label>salt<span>(default salt 'passid.org')</span>:</label>
