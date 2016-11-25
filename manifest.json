@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Password Generator",
-  "version": "2.0",
+  "version": "2.1",
 
   "description": "This is an extension of passid.org, which can generat password.",
   "icons": { "128": "assets/icon128.png" },

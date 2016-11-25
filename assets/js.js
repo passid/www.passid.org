@@ -37,6 +37,7 @@ new Vue({
         return
       }
       this.password = response["result"]
+      this.message = ''
       this.clearCountdown()
       var timer = window.setTimeout(this.clear , 60000)
       this.timers.push(timer)
