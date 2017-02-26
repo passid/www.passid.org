@@ -8,9 +8,9 @@
 <div id="template">
 <h1><a href="/">Password Generator</a></h1>
 <label>app(website):</label>
-<input v-model.trim="app" @keyup="render" type="text" placeholder="used for which app(website)" tabindex="2">
+<input v-model.trim="app" @keyup="render" type="text" placeholder="used for which app(website)" tabindex="1">
 <label>account(username):</label>
-<input v-model.trim="account" @keyup="render" type="text" placeholder="account(username) for login" require="true" autocomplete="false" tabindex="1">
+<input v-model.trim="account" @keyup="render" type="text" placeholder="account(username) for login" require="true" autocomplete="false" tabindex="2">
 <label>password:</label>
 <input :value="password" @mouseover="copy" name="password" type="text" placeholder="will be here" readonly="true">
 <h3>{{message}}</h3>
