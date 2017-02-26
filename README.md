@@ -8,7 +8,7 @@ one username , gives you different passwords between multiple websites/apps. Vis
 - passid.org is an open source project, you can fork it on github
 - We used sha512 and base64，and the hash function is base64(sha512(account + app + salt)).substr(((account + app + data.salt).length + length*length, length)
 - We adds some special words in base64, such as -@#~,.[]()!%^*$&
-- We don't support ie6, ie7 and ie8.
+- We don't support ie9-.
 
 ##问答
 - [下载chrome插件](https://chrome.google.com/webstore/detail/password-generator/pollejchmgaeaaamgmhckdhcaidfhikp)
