@@ -12,10 +12,10 @@
 <body>
 <div id="template">
 <h1><a href="/">Password Generator</a></h1>
-<label>app/website:</label>
-<input v-model.trim="app" @keyup="render" type="text" placeholder="used for which website / app" tabindex="2">
-<label>account/username:</label>
-<input v-model.trim="account" @keyup="render" type="text" placeholder="username on website / app" require="true" autocomplete="false" tabindex="1">
+<label>app(website):</label>
+<input v-model.trim="app" @keyup="render" type="text" placeholder="used for which app(website)" tabindex="2">
+<label>account(username):</label>
+<input v-model.trim="account" @keyup="render" type="text" placeholder="account on app(website)" require="true" autocomplete="false" tabindex="1">
 <label>password:</label>
 <input :value="password" @mouseover="copy" name="password" type="text" placeholder="will be here" readonly="true">
 <h3>{{message}}</h3>
