@@ -12,10 +12,10 @@
 <body>
 <div id="template">
 <h1><a href="cn.html">密码生成器</a></h1>
-<label>用户名:</label>
-<input v-model.trim="account" @keyup="render" type="text" placeholder="网站或app的用户名" require="true" autocomplete="false" tabindex="1">
 <label>网站/应用:</label>
 <input v-model.trim="app" @keyup="render" type="text" placeholder="用在哪个网站或应用" tabindex="2">
+<label>用户名:</label>
+<input v-model.trim="account" @keyup="render" type="text" placeholder="网站或app的用户名" require="true" autocomplete="false" tabindex="1">
 <label>密码:</label>
 <input :value="password" @mouseover="copy" name="password" type="text" placeholder="密码将出现在这里" readonly="true">
 <h3>{{message}}</h3>
