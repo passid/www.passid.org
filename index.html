@@ -17,7 +17,7 @@
 <label>account(username):</label>
 <input v-model.trim="account" @keyup="render" type="text" placeholder="account(username) for login" require="true" autocomplete="false" tabindex="2">
 <label>password:</label>
-<input :value="password" @mouseover="copy" name="password" type="text" placeholder="will be here" readonly="true">
+<input :value="password" @mouseover="copy" @click="copy" name="password" type="text" placeholder="will be here" readonly="true">
 <h3>{{message}}</h3>
 <h5>↓more settings↓</h5>
 <label>salt<span>(default salt 'passid.org')</span>:</label>

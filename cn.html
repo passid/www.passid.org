@@ -17,7 +17,7 @@
 <label>账号(用户名):</label>
 <input v-model.trim="account" @keyup="render" type="text" placeholder="登录账号(用户名)" require="true" autocomplete="false" tabindex="2">
 <label>密码:</label>
-<input :value="password" @mouseover="copy" name="password" type="text" placeholder="密码将出现在这里" readonly="true">
+<input :value="password" @mouseover="copy" @click="copy" name="password" type="text" placeholder="密码将出现在这里" readonly="true">
 <h3>{{message}}</h3>
 <h5>↓更多设置↓</h5>
 <label>salt<span>(默认salt为passid.org)</span>:</label>

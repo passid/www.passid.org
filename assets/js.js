@@ -45,12 +45,11 @@ new Vue({
     copy : function (event) {
       if(!this.password){ return}
       event && event.target.select()
+        var copy = false;
        try{
-         var copy = document.execCommand('Copy')
-         this.message = 'password is copyed'
-       }catch(e){
-         this.message = 'you can copy password now'
-       }
+         copy = document.execCommand('Copy')
+       }catch(e){}
+       this.message = copy ? 'password is copyed' : 'click to copy'
     },
     clear : function () {
         this.account = ''
