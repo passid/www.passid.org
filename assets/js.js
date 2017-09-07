@@ -43,14 +43,14 @@ new Vue({
       this.timers.push(timer)
     },
     copy : function (event) {
+      if(!this.password){ return}
       event && event.target.select()
-      // try{
-      //   var copy = document.execCommand('copy');
-      //   console.log(copy)
-      //   this.message = 'password is copyed'
-      // }catch(e){
-      //   this.message = 'you can copy password now'
-      // }
+       try{
+         var copy = document.execCommand('Copy')
+         this.message = 'password is copyed'
+       }catch(e){
+         this.message = 'you can copy password now'
+       }
     },
     clear : function () {
         this.account = ''
