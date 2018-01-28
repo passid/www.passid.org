@@ -6,14 +6,6 @@
   "description": "This is an extension of passid.org, which can generat password.",
   "icons": { "128": "assets/icon128.png" },
 
-  "content_scripts" :[
-    {
-      "matches" : ["<all_urls>"],
-      "js" : ["assets/allowCopyAndPaste.js"],
-      "all_frames": true
-    }
-  ],
-
   "browser_action": {
     "default_icon": {
         "19": "assets/icon19.png",
