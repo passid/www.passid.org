@@ -1,6 +1,6 @@
 Password Generator
 ====
-one username , gives you different passwords between multiple websites/apps. Visit <http://www.passid.org>
+one username , gives you different passwords between multiple websites/apps. Visit <https://www.passid.org/>
 
 ##FAQ
 - [download chrome extension](https://chrome.google.com/webstore/detail/password-generator/pollejchmgaeaaamgmhckdhcaidfhikp)
